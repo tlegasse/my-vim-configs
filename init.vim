@@ -7,8 +7,12 @@ runtime includes/theme.vim
 runtime includes/fzf.vim
 runtime includes/coc.vim
 runtime includes/crosshairs.vim
+runtime includes/ts.vim
 
-" autocmd VimEnter *
-  " \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))
-  " \|   PlugInstall | PlugUpgrade | PlugUpdate | qa
-  " \| endif
+bot sp
+wincmd j
+res10
+terminal
+wincmd k
+
+g:vimspector_configurations

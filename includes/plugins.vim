@@ -1,7 +1,7 @@
 call plug#begin()
 
 " Behavior
-Plug 'easymotion/vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
 Plug 'justinmk/vim-sneak'
 Plug 'mattn/emmet-vim'
 Plug 'mhinz/vim-signify'
@@ -12,15 +12,19 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'mbbill/undotree'
 
 " Highlighting
 Plug 'mxw/vim-jsx'
 Plug 'pangloss/vim-javascript'
 Plug 'bronson/vim-crosshairs'
+" Plug 'mfussenegger/nvim-dap'
+" Plug 'Pocco81/dap-buddy.nvim'
+Plug 'APZelos/blamer.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Coc/LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'puremourning/vimspector'
 
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
