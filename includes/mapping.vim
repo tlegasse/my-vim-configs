@@ -10,8 +10,8 @@ nnoremap <Leader>v :e C:\Users\Tanner\AppData\Local\nvim\init.vim<CR>
 nnoremap <C-S> :wq<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <Leader>q :Bdelete<CR>
-nmap <s-tab> <C-W>h 
-nmap <tab> <C-W>l 
+nmap <s-tab> :bprevious<CR>
+nmap <tab> :bnext<CR>
 
 " Airline
 nmap <Leader>1 <Plug>AirlineSelectTab1
@@ -25,15 +25,22 @@ nmap <Leader>8 <Plug>AirlineSelectTab8
 nmap <Leader>9 <Plug>AirlineSelectTab9
 nmap <Leader>0 <Plug>AirlineSelectTab0
 
-" Vimspector
-nnoremap <Leader>dd :call vimspector#Launch()<CR>
-nnoremap <Leader>de :call vimspector#Reset()<CR>
-nnoremap <Leader>dc :call vimspector#Continue()<CR>
+nnoremap <F5> :UndotreeToggle<CR>
 
-nnoremap <Leader>dt :call vimspector#ToggleBreakpoint()<CR>
-nnoremap <Leader>dT :call vimspector#ClearBreakpoints()<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
-nmap <Leader>dk <Plug>VimspectorRestart
-nmap <Leader>dh <Plug>VimspectorStepOut
-nmap <Leader>dl <Plug>VimspectorStepInto
-nmap <Leader>dj <Plug>VimspectorStepOver
+inoremap <c-U> <Esc>viwUi
+nnoremap <c-U> viwU<Esc>
+
+vnoremap < <gv
+vnoremap > >gv
+
+nnoremap <C-Q> :wq!<CR>
+
+nnoremap <M-j> :resize -2<CR>
+nnoremap <M-k> :resize +2<CR>
+nnoremap <M-h> :vertical resize -2<CR>
+nnoremap <M-l> :vertical resize +2<CR>

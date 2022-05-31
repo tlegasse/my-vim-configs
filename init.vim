@@ -14,5 +14,3 @@ wincmd j
 res10
 terminal
 wincmd k
-
-g:vimspector_configurations
