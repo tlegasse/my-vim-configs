@@ -14,6 +14,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'mbbill/undotree'
 Plug 'prettier/vim-prettier'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'tpope/vim-liquid'
 
 " Highlighting
 Plug 'mxw/vim-jsx'
