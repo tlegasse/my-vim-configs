@@ -12,8 +12,10 @@ set updatetime=750
 let g:sneak#label = 1
 set scrolloff=8
 set cmdheight=1
-set shell=powershell.exe
 set mouse=a
+set clipboard=unnamedplus
+" set shell=powershell
+set shellslash
 
 let g:loaded_perl_provider = 0
 let g:javascript_plugin_jsdoc = 1
