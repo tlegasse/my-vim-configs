@@ -12,5 +12,5 @@ runtime includes/ts.vim
 bot sp
 wincmd j
 res10
-terminal powershell
+terminal cmd
 wincmd k

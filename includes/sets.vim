@@ -7,7 +7,6 @@ set nohlsearch
 set number relativenumber
 set shiftwidth=4
 set tabstop=4
-set termguicolors
 set updatetime=750
 let g:sneak#label = 1
 set scrolloff=8
@@ -16,6 +15,11 @@ set mouse=a
 set clipboard=unnamedplus
 " set shell=powershell
 set shellslash
+syntax on
+filetype plugin indent on
+set nowrap
+set ignorecase
+set smartcase
 
 let g:loaded_perl_provider = 0
 let g:javascript_plugin_jsdoc = 1

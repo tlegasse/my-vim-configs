@@ -9,9 +9,10 @@ nnoremap <Leader>v :e C:\Users\Tanner\AppData\Local\nvim\init.vim<CR>
 
 nnoremap <C-S> :wq<CR>
 nnoremap <C-s> :w<CR>
-nnoremap <Leader>q :Bdelete<CR>
-nmap <s-tab> :bprevious<CR>
+nnoremap <silent> <Leader>q :Bdelete<CR>
+
 nmap <tab> :bnext<CR>
+nmap <s-tab> :bprevious<CR>
 
 " Airline
 nmap <Leader>1 <Plug>AirlineSelectTab1
@@ -40,10 +41,23 @@ vnoremap > >gv
 
 nnoremap <C-Q> :wq!<CR>
 
-nnoremap <M-j> :resize -2<CR>
-nnoremap <M-k> :resize +2<CR>
-nnoremap <M-h> :vertical resize -2<CR>
-nnoremap <M-l> :vertical resize +2<CR>
+nnoremap <M-j> :resize -10<CR>
+nnoremap <M-k> :resize +10<CR>
+nnoremap <M-h> :vertical resize -10<CR>
+nnoremap <M-l> :vertical resize +10<CR>
 nnoremap <c-p> :Files<CR>
-nnoremap <C-F> :Ag<CR>
+" nnoremap <C-F> :Ag<CR>
 nnoremap <Leader><Leader>t :terminal cmd.exe<CR>
+
+" Optionally copy path to a named register (* in this case) when calling :JsonPath
+let g:jsonpath_register = '*'
+
+" Define mappings for json buffers
+au FileType json noremap <buffer> <silent> <leader>d :call jsonpath#echo()<CR>
+au FileType json noremap <buffer> <silent> <leader>g :call jsonpath#goto()<CR>
+
+" Git stuff
+nnoremap <Leader>g :G<CR>
+nnoremap <Leader>gc :G commit -m '
+nnoremap <Leader>gb :G checkout 
+
