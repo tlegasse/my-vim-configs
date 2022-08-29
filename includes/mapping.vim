@@ -82,3 +82,5 @@ let g:jsonpath_register = '+'
 au FileType json noremap <buffer> <silent> <leader>d :call jsonpath#echo()<CR>
 
 nnoremap <Leader>v :e ~/.config/nvim/init.vim<CR>
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
