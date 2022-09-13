@@ -12,7 +12,6 @@ let g:sneak#label = 1
 set scrolloff=8
 set cmdheight=1
 set mouse=a
-set clipboard=unnamedplus
 " set shell=powershell
 set shellslash
 syntax on
@@ -31,3 +30,12 @@ let g:python3_host_prog = '/usr/bin/python3'
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-s>s"
 let g:UltiSnipsJumpBackwardTrigger="<c-s>a"
+set clipboard=unnamedplus
+
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['liquid'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['ttf'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['woff'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['woff2'] = ''
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['svg'] = '縉'
+
