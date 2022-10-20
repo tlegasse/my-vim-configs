@@ -7,14 +7,14 @@ set nohlsearch
 set number relativenumber
 set shiftwidth=4
 set tabstop=4
-set updatetime=750
+set updatetime=300
+set timeoutlen=500
 let g:sneak#label = 1
 set scrolloff=8
 set cmdheight=1
 set mouse=a
 " set shell=powershell
 set shellslash
-syntax on
 filetype plugin indent on
 set nowrap
 set ignorecase
@@ -39,3 +39,4 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['woff'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['woff2'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['svg'] = '縉'
 
+set nocursorline

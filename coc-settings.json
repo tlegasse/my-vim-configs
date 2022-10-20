@@ -9,9 +9,9 @@
       ],
       "settings": {
         "themeCheck": {
-          "checkOnOpen": true,
-          "checkOnChange": true,
-          "checkOnSave": true,
+          "checkOnOpen": false,
+          "checkOnChange": false,
+         "checkOnSave": true
         }
       },
       "rootPatterns": [
