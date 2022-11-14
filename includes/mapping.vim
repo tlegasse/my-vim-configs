@@ -83,3 +83,7 @@ nnoremap <Leader>hp :lua lua("harpoon.ui").nav_prev()<cr>
 
 nnoremap gt :lua require("harpoon.tmux").gotoTerminal("{down-of}")<cr>
 nnoremap <Leader>i "_diwP
+
+inoremap kj <esc>
+
+nnoremap <Leader>dt :CocCommand docthis.documentThis<cr>

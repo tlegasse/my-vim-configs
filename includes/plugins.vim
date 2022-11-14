@@ -20,6 +20,8 @@ Plug 'itchyny/vim-gitbranch'
 " Highlighting
 Plug 'mxw/vim-jsx'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'itchyny/vim-cursorword'
+Plug 'machakann/vim-highlightedyank'
 
 " Coc/LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
