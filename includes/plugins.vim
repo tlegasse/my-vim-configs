@@ -45,7 +45,8 @@ Plug 'andymass/vim-matchup'
 Plug 'ThePrimeagen/harpoon'
 Plug 'vimwiki/vimwiki'
 
-Plug 'jaredgorski/fogbell.vim'
+Plug 'fxn/vim-monochrome'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 
@@ -55,7 +56,6 @@ call plug#end()
 "Plug 'neovim/nvim-lspconfig'
 "Plug 'junegunn/fzf.vim'
 "Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
-"Plug 'vim-airline/vim-airline-themes'
 "Plug 'thaerkh/vim-workspace'
 "Plug 'mhinz/vim-signify'
 

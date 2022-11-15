@@ -2,6 +2,6 @@
 
 "set t_Co=256
 
-colorscheme fogbell_light
+colorscheme monochrome
 
 syntax on
