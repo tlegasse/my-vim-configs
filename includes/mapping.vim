@@ -17,6 +17,8 @@ nmap <Leader>0 <Plug>AirlineSelectTab0
 " Window controls
 nnoremap <M-j> :resize -10<CR>
 nnoremap <M-k> :resize +10<CR>
+nnoremap <C-J> :resize -10<CR>
+nnoremap <C-K> :resize +10<CR>
 nnoremap <M-h> :vertical resize -10<CR>
 nnoremap <M-l> :vertical resize +10<CR>
 
