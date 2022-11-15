@@ -2,6 +2,6 @@
 
 "set t_Co=256
 
-colorscheme monochrome
+colorscheme elflord
 
 syntax on

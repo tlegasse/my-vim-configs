@@ -183,5 +183,40 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 inoremap <silent><expr> <c-space> coc#refresh()
 
-hi CocSearch ctermfg=12 guifg=#18A3FF
-hi CocMenuSel ctermbg=109 guibg=#13354A
+hi CocSearch ctermfg=9 
+hi CocMenuSel ctermbg=0 ctermFg=15
+hi Pmenu ctermfg=0 ctermbg=15
+hi PmenuSel ctermfg=15 ctermbg=0
+hi FgCocErrorFloatBgCocFloating ctermfg=Black ctermbg=White guifg=White guibg=Black
+hi CocFloating ctermbg=15 ctermfg=0
+hi CocHintFloat ctermbg=0
+
+
+hi CocSemNumber ctermbg=0   
+hi CocSemFunction ctermbg=0 
+hi CocSemKeyword ctermbg=0  
+hi CocSemParameter ctermbg=0 
+hi CocSemEvent ctermbg=0    
+hi CocSemModifier ctermbg=0 
+hi CocSemMacro ctermbg=0    
+hi CocSemDeprecated ctermbg=0 
+hi CocSemClass ctermbg=0    
+hi CocSemDecorator ctermbg=0 
+hi CocSemOperator ctermbg=0 
+hi CocSemStruct ctermbg=0   
+
+hi CocSemMethod ctermbg=0   
+hi CocSemComment ctermbg=0  
+hi CocSemEnum ctermbg=0     
+hi CocSemInterface ctermbg=0 
+hi CocSemType ctermbg=0     
+hi CocSemProperty ctermbg=0 
+hi CocSemTypeParameter ctermbg=0 
+hi CocSemEnumMember ctermbg=0 
+hi CocSemBoolean ctermbg=0  
+hi CocSemNamespace ctermbg=0 
+hi CocSemString ctermbg=0   
+hi CocSemVariable ctermbg=0 
+
+hi CocFloating ctermbg=232 ctermfg=15
+hi Statement ctermfg=15

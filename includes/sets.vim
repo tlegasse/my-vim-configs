@@ -1,5 +1,5 @@
 " Sets
-set background=dark
+" set background=dark
 set encoding=utf-8
 set expandtab
 " set guifont=BitstreamVeraSansMono_NF:h13
