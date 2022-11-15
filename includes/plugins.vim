@@ -44,6 +44,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'andymass/vim-matchup'
 Plug 'ThePrimeagen/harpoon'
 Plug 'vimwiki/vimwiki'
+
+Plug 'jaredgorski/fogbell.vim'
 call plug#end()
 
 
