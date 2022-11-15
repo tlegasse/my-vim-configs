@@ -11,3 +11,7 @@ runtime includes/ts.vim
 
 runtime includes/misc.vim
 runtime includes/sets.vim
+
+syntax on
+highlight Visual ctermbg=15 ctermfg=0
+
