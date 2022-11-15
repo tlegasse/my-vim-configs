@@ -27,4 +27,4 @@ let g:airline_symbols.linenr = ''
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#buffer_idx_mode = 1
 
-let g:airline_theme='night_owl'
+let g:airline_theme='alduin'

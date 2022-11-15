@@ -186,7 +186,7 @@ inoremap <silent><expr> <c-space> coc#refresh()
 hi CocSearch ctermfg=9 
 hi CocMenuSel ctermbg=0 ctermFg=15
 hi Pmenu ctermfg=0 ctermbg=15
-hi PmenuSel ctermfg=15 ctermbg=0
+hi PmenuSel ctermfg=0 ctermbg=14
 hi FgCocErrorFloatBgCocFloating ctermfg=Black ctermbg=White guifg=White guibg=Black
 hi CocFloating ctermbg=15 ctermfg=0
 hi CocHintFloat ctermbg=0

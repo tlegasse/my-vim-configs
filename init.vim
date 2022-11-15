@@ -1,4 +1,5 @@
 " Plugins/ General
+syntax on
 runtime includes/plugins.vim
 runtime includes/theme.vim
 runtime includes/mapping.vim
@@ -12,6 +13,5 @@ runtime includes/ts.vim
 runtime includes/misc.vim
 runtime includes/sets.vim
 
-syntax on
 highlight Visual ctermbg=15 ctermfg=0
 
