@@ -1,8 +1,11 @@
 let uname = substitute(system('uname'),'\n','','')
+
 if uname == 'Linux'
-    if system('$PATH')=~ '/mnt/c/WINDOWS'
+    let lines = readfile("/proc/version")
+    if lines[0] =~ "microsoft"
         " We are in Windows Subsystem
-        endiflet g:clipboard = {
+
+        let g:clipboard = {
           \   'name': 'win32yank-wsl',
           \   'copy': {
           \      '+': 'win32yank.exe -i --crlf',
