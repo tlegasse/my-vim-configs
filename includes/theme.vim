@@ -2,6 +2,7 @@
 
 "set t_Co=256
 
-colorscheme elflord
+colorscheme onedarkpro
+set background=light
 
 syntax on

@@ -47,6 +47,7 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'fxn/vim-monochrome'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'olimorris/onedarkpro.nvim'
 call plug#end()
 
 
