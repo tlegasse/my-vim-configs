@@ -13,4 +13,5 @@ runtime includes/misc.vim
 runtime includes/copy_paste.vim
 runtime includes/sets.vim
 
+runtime includes/netrw.vim
 

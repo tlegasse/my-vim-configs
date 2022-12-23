@@ -2,8 +2,6 @@ call plug#begin()
 
 " Behavior
 Plug 'justinmk/vim-sneak'
-Plug 'preservim/nerdtree'
-Plug 'airblade/vim-gitgutter'
 Plug 'mbbill/undotree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
@@ -18,8 +16,8 @@ Plug 'ThePrimeagen/harpoon'
 
 " Git
 Plug 'tpope/vim-fugitive'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'itchyny/vim-gitbranch'
+Plug 'airblade/vim-gitgutter'
 
 " Highlighting
 Plug 'mxw/vim-jsx'
@@ -38,10 +36,18 @@ Plug 'dense-analysis/ale'
 
 " Theming
 Plug 'ryanoasis/vim-devicons'
-Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'NLKNguyen/papercolor-theme'
 
 Plug 'vimwiki/vimwiki'
+Plug 'nathom/filetype.nvim'
+
+Plug 'lewis6991/impatient.nvim'
+Plug 'tpope/vim-vinegar'
 call plug#end()
+
+
+"Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+"Plug 'preservim/nerdtree'
+"Plug 'Xuyuanp/nerdtree-git-plugin'

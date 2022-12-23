@@ -13,6 +13,8 @@ nmap <Leader>7 <Plug>AirlineSelectTab7
 nmap <Leader>8 <Plug>AirlineSelectTab8
 nmap <Leader>9 <Plug>AirlineSelectTab9
 nmap <Leader>0 <Plug>AirlineSelectTab0
+nmap <TAB> :bnext<CR>
+nmap <S-TAB> :bprevious<CR>
 
 " Window controls
 nnoremap <M-j> :resize -10<CR>
@@ -63,7 +65,6 @@ au FileType json noremap <buffer> <silent> <leader>d :call jsonpath#echo()<CR>
 " Misc
 nnoremap <leader>u :UndotreeToggle<CR>
 nnoremap <Leader>v :e ~/.config/nvim/init.vim<CR>
-nnoremap <Leader>n :NERDTreeToggle<cr>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <C-S> :wq<CR>
 nnoremap <C-s> :w<CR>
