@@ -36,14 +36,20 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 
 " Theming
-Plug 'kyoz/purify', { 'rtp': 'vim' }
+"Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+Plug 'haishanh/night-owl.vim'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'andymass/vim-matchup'
 Plug 'ThePrimeagen/harpoon'
 Plug 'vimwiki/vimwiki'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'puremourning/vimspector'
+Plug 'dense-analysis/ale'
+Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 call plug#end()
 
 
@@ -53,7 +59,6 @@ call plug#end()
 "Plug 'neovim/nvim-lspconfig'
 "Plug 'junegunn/fzf.vim'
 "Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
-"Plug 'vim-airline/vim-airline-themes'
 "Plug 'thaerkh/vim-workspace'
 "Plug 'mhinz/vim-signify'
 

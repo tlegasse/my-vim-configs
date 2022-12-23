@@ -1,5 +1,4 @@
 " Sets
-set background=dark
 set encoding=utf-8
 set expandtab
 " set guifont=BitstreamVeraSansMono_NF:h13
@@ -40,3 +39,5 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['woff2'] = ''
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['svg'] = '縉'
 
 set nocursorline
+
+let g:vimspector_enable_mappings='HUMAN'

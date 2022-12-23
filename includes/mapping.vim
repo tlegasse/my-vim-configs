@@ -87,3 +87,5 @@ nnoremap <Leader>i "_diwP
 inoremap kj <esc>
 
 nnoremap <Leader>dt :CocCommand docthis.documentThis<cr>
+
+nnoremap <leader>a ggVGy<C-o>z.

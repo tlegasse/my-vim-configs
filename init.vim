@@ -11,3 +11,8 @@ runtime includes/ts.vim
 
 runtime includes/misc.vim
 runtime includes/sets.vim
+
+
+let b:ale_linters = ['eslint', 'pylint']
+
+highlight Comment gui=italic cterm=italic

@@ -11,8 +11,5 @@ let g:clipboard = {
           \   'cache_enabled': 0,
           \ }
 
-execut 'hi NERDTreeFlags guifg=#5fff87'
-
 set signcolumn=yes
 
-highlight Comment gui=italic cterm=italic

@@ -8,7 +8,7 @@ autocmd StdinReadPre * let s:std_in=1
 "autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 
 "let NERDTreeShowHidden=1
-let NERDTreeHighlightCursorline=0
+let NERDTreeHighlightCursorline=1
 
 nmap <Leader>nt :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen=1
