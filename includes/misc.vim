@@ -1,6 +1,6 @@
 let uname = substitute(system('uname'),'\n','','')
 
-if uname == 'Linux'
+if uname == 'Linux' && filereadable("/proc/version")
     let lines = readfile("/proc/version")
     if lines[0] =~ "microsoft"
         " We are in Windows Subsystem
