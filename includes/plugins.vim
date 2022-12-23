@@ -39,7 +39,6 @@ Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
 "Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
-Plug 'haishanh/night-owl.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
@@ -47,7 +46,6 @@ Plug 'andymass/vim-matchup'
 Plug 'ThePrimeagen/harpoon'
 Plug 'vimwiki/vimwiki'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'puremourning/vimspector'
 Plug 'dense-analysis/ale'
 call plug#end()
 
