@@ -16,3 +16,4 @@ runtime includes/sets.vim
 let b:ale_linters = ['eslint', 'pylint']
 
 highlight Comment gui=italic cterm=italic
+lua require("harpoon.init").setup({mark_branch = true})

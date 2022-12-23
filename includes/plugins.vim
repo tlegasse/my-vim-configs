@@ -49,17 +49,5 @@ Plug 'vimwiki/vimwiki'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'puremourning/vimspector'
 Plug 'dense-analysis/ale'
-Plug 'heavenshell/vim-pydocstring', { 'do': 'make install', 'for': 'python' }
 call plug#end()
 
-
-"icebox
-"Plug 'mcchrish/nnn.vim'
-"Plug 'neoclide/coc-tsserver'
-"Plug 'neovim/nvim-lspconfig'
-"Plug 'junegunn/fzf.vim'
-"Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
-"Plug 'thaerkh/vim-workspace'
-"Plug 'mhinz/vim-signify'
-
-lua require("harpoon.init").setup({mark_branch = true})
