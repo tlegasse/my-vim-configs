@@ -16,3 +16,5 @@ EOF
   "},
   "filetype = "liquid"
 "}
+
+let b:ale_linters = ['eslint', 'pylint']

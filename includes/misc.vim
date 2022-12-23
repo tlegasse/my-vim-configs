@@ -1,24 +1,13 @@
 let uname = substitute(system('uname'),'\n','','')
 
+let g:is_wsl = 0
 if uname == 'Linux' && filereadable("/proc/version")
     let lines = readfile("/proc/version")
     if lines[0] =~ "microsoft"
         " We are in Windows Subsystem
-
-        let g:clipboard = {
-          \   'name': 'win32yank-wsl',
-          \   'copy': {
-          \      '+': 'win32yank.exe -i --crlf',
-          \      '*': 'win32yank.exe -i --crlf',
-          \    },
-          \   'paste': {
-          \      '+': 'win32yank.exe -o --lf',
-          \      '*': 'win32yank.exe -o --lf',
-          \   },
-          \   'cache_enabled': 0,
-          \ }
+        let g:is_wsl = 1
     endif
 endif
 
-set signcolumn=yes
 
+lua require("harpoon.init").setup({mark_branch = true})

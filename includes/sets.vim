@@ -41,3 +41,5 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['svg'] = '縉'
 set nocursorline
 
 let g:vimspector_enable_mappings='HUMAN'
+
+set signcolumn=yes

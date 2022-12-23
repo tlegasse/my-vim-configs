@@ -11,6 +11,10 @@ Plug 'preservim/nerdcommenter'
 Plug 'mogelbrod/vim-jsonpath'
 Plug 'moll/vim-bbye'
 Plug 'unblevable/quick-scope'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'ThePrimeagen/harpoon'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -22,6 +26,7 @@ Plug 'mxw/vim-jsx'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
+Plug 'andymass/vim-matchup'
 
 " Coc/LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -29,23 +34,14 @@ Plug 'honza/vim-snippets'
 Plug 'dag/vim-fish'
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier'
-
-" FZF
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.0' }
+Plug 'dense-analysis/ale'
 
 " Theming
-"Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'ryanoasis/vim-devicons'
 Plug 'vwxyutarooo/nerdtree-devicons-syntax'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-
-Plug 'andymass/vim-matchup'
-Plug 'ThePrimeagen/harpoon'
-Plug 'vimwiki/vimwiki'
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'dense-analysis/ale'
-call plug#end()
 
+Plug 'vimwiki/vimwiki'
+call plug#end()
