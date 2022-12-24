@@ -1,7 +1,7 @@
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
 nnoremap - :Lexplore %:p:h<CR>
-nnoremap <leader>n :Lexplore %:p:h<CR>
+"nnoremap <leader>n :Lexplore %:p:h<CR>
 nnoremap <Leader>nc :Lexplore<CR>
 
 
@@ -23,7 +23,8 @@ function! NetrwMapping()
 
     nmap <buffer> L <CR>:Lexplore<CR>
     nmap <buffer> <leader>n ZZ
-    nmap <buffer> <C-l> <C-w>l
+    nmap <buffer> - ZZ
+    "nmap <buffer> <C-l> <C-w>l
 
     nmap <buffer> <TAB> mf
     nmap <buffer> <S-TAB> mF
@@ -79,4 +80,5 @@ function! s:rmdir()
   endif
 endfunction
 command! Rmnetrw call <SID>rmdir()
+
 

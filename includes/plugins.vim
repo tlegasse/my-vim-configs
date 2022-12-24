@@ -44,7 +44,7 @@ Plug 'vimwiki/vimwiki'
 Plug 'nathom/filetype.nvim'
 
 Plug 'lewis6991/impatient.nvim'
-Plug 'tpope/vim-vinegar'
+"Plug 'tpope/vim-vinegar'
 call plug#end()
 
 
