@@ -32,7 +32,7 @@ Plug 'honza/vim-snippets'
 Plug 'dag/vim-fish'
 Plug 'mattn/emmet-vim'
 Plug 'prettier/vim-prettier'
-Plug 'dense-analysis/ale'
+"Plug 'dense-analysis/ale'
 
 " Theming
 Plug 'ryanoasis/vim-devicons'

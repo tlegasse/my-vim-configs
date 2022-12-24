@@ -17,7 +17,7 @@ EOF
   "filetype = "liquid"
 "}
 
-let b:ale_linters = ['eslint', 'pylint']
+"let b:ale_linters = ['eslint', 'pylint']
 
-let g:syntastic_ignore_files = ['.*\.wiki']
-autocmd BufEnter *.wiki ALEDisable
+"let g:syntastic_ignore_files = ['.*\.wiki']
+"autocmd BufEnter *.wiki ALEDisable

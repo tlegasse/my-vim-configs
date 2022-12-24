@@ -90,3 +90,7 @@ inoremap kj <esc>
 nnoremap <Leader>dt :CocCommand docthis.documentThis<cr>
 
 nnoremap <leader>a ggVGy<C-o>z.
+
+nmap <silent> ga <Plug>(coc-codeaction-line)
+xmap <silent> ga <Plug>(coc-codeaction-selected)
+nmap <silent> gA <Plug>(coc-codeaction)
