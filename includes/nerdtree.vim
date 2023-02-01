@@ -11,6 +11,8 @@ autocmd StdinReadPre * let s:std_in=1
 let NERDTreeHighlightCursorline=1
 
 nmap <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>n :NERDTreeToggle<CR>
+
 let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable = '▸'

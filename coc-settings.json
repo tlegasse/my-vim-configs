@@ -1,23 +1,5 @@
 {
   "tsserver.log": "verbose",
   "tsserver.trace.server": "verbose",
-  "languageserver": {
-    "liquid": {
-      "command": "theme-check-language-server",
-      "filetypes": [
-        "liquid"
-      ],
-      "settings": {
-        "themeCheck": {
-          "checkOnOpen": false,
-          "checkOnChange": false,
-         "checkOnSave": true
-        }
-      },
-      "rootPatterns": [
-        ".theme-check.yml"
-      ]
-    }
-  },
   "snippets.ultisnips.pythonPrompt": false
 }

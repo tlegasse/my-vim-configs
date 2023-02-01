@@ -1,11 +1,4 @@
-" Theme settings
-
-"set t_Co=256
-
-"hi Visual  guifg=#000000 guibg=#FFFF87 gui=none
-
-set background=light
-colorscheme PaperColor
+colorscheme github_light
 
 if (has("termguicolors"))
   "let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
@@ -16,3 +9,9 @@ endif
 syntax enable
 
 highlight Comment gui=italic cterm=italic
+
+lua <<EOF
+require("github-theme").setup({
+    transparent = true
+})
+EOF

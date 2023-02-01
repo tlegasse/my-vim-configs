@@ -94,3 +94,9 @@ nnoremap <leader>a ggVGy<C-o>z.
 nmap <silent> ga <Plug>(coc-codeaction-line)
 xmap <silent> ga <Plug>(coc-codeaction-selected)
 nmap <silent> gA <Plug>(coc-codeaction)
+
+nmap <C-d> <C-d>zz
+nmap <C-u> <C-u>zz
+
+nmap n nzzzv
+nmap N Nzzzv

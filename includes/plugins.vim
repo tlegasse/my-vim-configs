@@ -29,25 +29,20 @@ Plug 'andymass/vim-matchup'
 " Coc/LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
-Plug 'dag/vim-fish'
 Plug 'mattn/emmet-vim'
-Plug 'prettier/vim-prettier'
-"Plug 'dense-analysis/ale'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
 
 " Theming
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'NLKNguyen/papercolor-theme'
+Plug 'projekt0n/github-nvim-theme', { 'tag': 'v0.0.7' }
 
 Plug 'vimwiki/vimwiki'
-Plug 'nathom/filetype.nvim'
+
+Plug 'vwxyutarooo/nerdtree-devicons-syntax'
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'lewis6991/impatient.nvim'
-"Plug 'tpope/vim-vinegar'
 call plug#end()
-
-
-"Plug 'vwxyutarooo/nerdtree-devicons-syntax'
-"Plug 'preservim/nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin'
