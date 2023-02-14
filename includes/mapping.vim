@@ -68,6 +68,7 @@ nnoremap <Leader>v :e ~/.config/nvim/init.vim<CR>
 tnoremap <Esc> <C-\><C-n>
 nnoremap <C-S> :wq<CR>
 nnoremap <C-s> :w<CR>
+inoremap <C-s> <ESC>:w<CR>a
 nnoremap <silent> <Leader>q :Bdelete<CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
@@ -100,3 +101,5 @@ nmap <C-u> <C-u>zz
 
 nmap n nzzzv
 nmap N Nzzzv
+
+nmap <C-p> <Plug>yankstack_substitute_older_paste

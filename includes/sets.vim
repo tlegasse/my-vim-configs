@@ -50,6 +50,3 @@ set guicursor=n-v-c:block-Cursor
 set guicursor+=i:ver100-iCursor
 set guicursor+=n-v-c:blinkon0
 set guicursor+=i:blinkwait10
-
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0

@@ -40,4 +40,4 @@ let g:prettier#config#end_of_line = get(g:, 'prettier#config#end_of_line', 'lf')
 
 let g:prettier#quickfix_enabled = 0
 
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.svelte,*.yaml,*.html,*.liquid PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.vue,*.svelte,*.yaml,*.html,*.liquid PrettierAsync

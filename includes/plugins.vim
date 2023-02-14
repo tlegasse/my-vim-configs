@@ -16,12 +16,13 @@ Plug 'ThePrimeagen/harpoon'
 
 " Git
 Plug 'tpope/vim-fugitive'
+Plug 'rbong/vim-flog'
 Plug 'itchyny/vim-gitbranch'
 Plug 'airblade/vim-gitgutter'
 
 " Highlighting
 Plug 'mxw/vim-jsx'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'itchyny/vim-cursorword'
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
@@ -45,4 +46,7 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'lewis6991/impatient.nvim'
+Plug 'maxbrunsfeld/vim-yankstack'
+
+Plug 'github/copilot.vim'
 call plug#end()
