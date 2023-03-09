@@ -28,10 +28,14 @@ vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
 
-vim.opt.colorcolumn = "80"
+-- vim.opt.colorcolumn = "80" --
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+vim.g['sneak#label'] = 1
+
+vim.o.backupcopy="yes"
 
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
@@ -44,6 +48,8 @@ if vim.fn.has("wsl") == 1 then
       ["+"] = "win32yank.exe -o --lf",
       ["*"] = "win32yank.exe -o --lf",
     },
-    cache_enabled = 0,
+    cache_enabled = 1,
   }
 end
+
+vim.opt.clipboard = "unnamedplus"

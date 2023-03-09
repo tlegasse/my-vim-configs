@@ -1,9 +1,9 @@
 require('github-theme').setup({
-    theme_style = "light"
+    -- theme_style = "light" --
 })
 
 function ColorMyPencils(color)
-	color = color or "github_light"
+	color = color or "github_dimmed"
 	vim.cmd.colorscheme(color)
 
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
