@@ -80,4 +80,5 @@ return require('packer').startup(function(use)
     use("vimwiki/vimwiki")
 
     use("deris/vim-shot-f")
+    use("folke/zen-mode.nvim")
 end)
