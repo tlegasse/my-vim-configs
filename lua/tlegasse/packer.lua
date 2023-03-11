@@ -81,4 +81,5 @@ return require('packer').startup(function(use)
 
     use("deris/vim-shot-f")
     use("folke/zen-mode.nvim")
+    use("christoomey/vim-tmux-navigator")
 end)
