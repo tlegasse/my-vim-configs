@@ -35,6 +35,8 @@ vim.g['sneak#label'] = 1
 
 vim.o.backupcopy="yes"
 
+vim.g.diagnostics = "nvim_lsp"
+
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = "win32yank-wsl",

@@ -62,7 +62,7 @@ return require('packer').startup(function(use)
     use("projekt0n/github-nvim-theme")
     use("phelipetls/jsonpath.nvim")
     use("tpope/vim-surround")
-    use("justinmk/vim-sneak")
+    use("ggandor/leap.nvim")
     use("preservim/nerdcommenter")
 
     use {
@@ -79,7 +79,8 @@ return require('packer').startup(function(use)
     }
     use("vimwiki/vimwiki")
 
-    use("deris/vim-shot-f")
+    use("ggandor/flit.nvim")
     use("folke/zen-mode.nvim")
     use("christoomey/vim-tmux-navigator")
+    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 end)
