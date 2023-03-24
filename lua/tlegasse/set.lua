@@ -52,4 +52,6 @@ if vim.fn.has("wsl") == 1 then
   }
 end
 
+vim.opt.listchars = { space = '.', tab = '>~' }
+
 vim.opt.clipboard = "unnamedplus"

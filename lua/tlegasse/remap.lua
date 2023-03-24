@@ -9,7 +9,6 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
 -- greatest remap ever
 vim.keymap.set("x", "<leader>i", [["_dP]])
 vim.keymap.set("n", "<leader>i", [["_diwP]])
@@ -44,19 +43,21 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-vim.keymap.set("n", "<tab>", "<cmd>bn<CR>")
-vim.keymap.set("n", "<S-tab>", "<cmd>bp<CR>")
-vim.keymap.set("n", "<leader>q", "<cmd>bd<CR>")
-
 
 vim.keymap.set("n", "<leader>e", "<cmd>Exp<CR>")
 
 vim.keymap.set("i", "kj", "<Esc>")
 
---vim.keymap.set("n", "<C-h>", "<C-w>h")
---vim.keymap.set("n", "<C-l>", "<C-w>l")
---vim.keymap.set("n", "<C-j>", "<C-w>j")
---vim.keymap.set("n", "<C-k>", "<C-w>k")
-
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
+
+vim.keymap.set("n", "<C-w>", "<cmd>bd<cr>")
+vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
+
+vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
+vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
+vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
+vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
+
+vim.keymap.set("n", "<leader>wv", "<cmd>wincmd s<CR>")
+vim.keymap.set("n", "<leader>wh", "<cmd>wincmd v<CR>")
