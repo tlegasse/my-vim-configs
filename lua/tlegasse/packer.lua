@@ -25,7 +25,6 @@ return require('packer').startup(function(use)
 
 
     use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use("nvim-treesitter/playground")
     use("theprimeagen/harpoon")
     use("theprimeagen/refactoring.nvim")
     use("mbbill/undotree")
@@ -70,27 +69,17 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
-    use {
-        'goolord/alpha-nvim',
-        requires = { 'nvim-tree/nvim-web-devicons' },
-        config = function ()
-            require'alpha'.setup(require'alpha.themes.startify'.config)
-        end
-    }
     use("vimwiki/vimwiki")
 
     use("tpope/vim-repeat")
     use("ggandor/flit.nvim")
-    use("folke/zen-mode.nvim")
     use("christoomey/vim-tmux-navigator")
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
     use {
         'nvim-lualine/lualine.nvim',
        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
 
-    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
     use {
         'KadoBOT/nvim-spotify',
         requires = 'nvim-telescope/telescope.nvim',

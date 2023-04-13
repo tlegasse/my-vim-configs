@@ -37,6 +37,8 @@ vim.o.backupcopy="yes"
 
 vim.g.diagnostics = "nvim_lsp"
 
+vim.cmd "set noshowmode"
+
 if vim.fn.has("wsl") == 1 then
   vim.g.clipboard = {
     name = "win32yank-wsl",

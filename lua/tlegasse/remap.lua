@@ -17,16 +17,6 @@ vim.keymap.set("n", "<leader>i", [["_diwP]])
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
-vim.keymap.set({ "n", "v" }, "<leader>ya", [["ay]])
-vim.keymap.set({ "n", "v" }, "<leader>ys", [["sy]])
-vim.keymap.set({ "n", "v" }, "<leader>yd", [["dy]])
-vim.keymap.set({ "n", "v" }, "<leader>yf", [["fy]])
-
-vim.keymap.set({ "n", "v" }, "<leader>pa", [["ap]])
-vim.keymap.set({ "n", "v" }, "<leader>ps", [["sp]])
-vim.keymap.set({ "n", "v" }, "<leader>pd", [["dp]])
-vim.keymap.set({ "n", "v" }, "<leader>pf", [["fp]])
-
 vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 
 vim.keymap.set("n", "Q", "<nop>")
@@ -43,7 +33,6 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
-
 vim.keymap.set("n", "<leader>e", "<cmd>Exp<CR>")
 
 vim.keymap.set("i", "kj", "<Esc>")
@@ -53,6 +42,10 @@ vim.keymap.set("v", "<", "<gv")
 
 vim.keymap.set("n", "<C-w>", "<cmd>bd<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
+
+vim.keymap.set("n", "<leader>bn", "<cmd>bn<cr>")
+vim.keymap.set("n", "<leader>bp", "<cmd>bp<cr>")
+vim.keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>")
 
 vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
