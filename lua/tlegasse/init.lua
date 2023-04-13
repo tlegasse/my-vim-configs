@@ -33,4 +33,18 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
+vim.cmd [[
+augroup WikiFileSettings
+  autocmd!
+  autocmd FileType wiki setlocal wrap linebreak textwidth=0
+augroup END
+]]
+
+vim.cmd [[
+augroup WikiFiletype
+  autocmd!
+  autocmd BufNewFile,BufRead *.wiki setfiletype wiki
+augroup END
+]]
+
 require('leap').add_default_mappings()
