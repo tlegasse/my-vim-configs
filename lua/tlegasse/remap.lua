@@ -40,11 +40,10 @@ vim.keymap.set("i", "kj", "<Esc>")
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
 
-vim.keymap.set("n", "<C-w>", "<cmd>bd<cr>")
 vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
 
-vim.keymap.set("n", "<leader>bn", "<cmd>bn<cr>")
-vim.keymap.set("n", "<leader>bp", "<cmd>bp<cr>")
+vim.keymap.set("n", "<Tab>", "<cmd>bn<cr>")
+vim.keymap.set("n", "<S-Tab>", "<cmd>bp<cr>")
 vim.keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>")
 
 vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
