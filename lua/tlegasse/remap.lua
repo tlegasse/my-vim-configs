@@ -44,7 +44,8 @@ vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
 
 vim.keymap.set("n", "<Tab>", "<cmd>bn<cr>")
 vim.keymap.set("n", "<S-Tab>", "<cmd>bp<cr>")
-vim.keymap.set("n", "<leader>tb", "<cmd>Telescope buffers<cr>")
+vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<cr>")
+vim.keymap.set("n", "<leader>gg", "<cmd>Telescope git_files<cr>")
 
 vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
 vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")

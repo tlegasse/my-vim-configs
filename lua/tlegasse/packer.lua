@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
     }
 
     use("mattn/emmet-vim")
-    use("projekt0n/github-nvim-theme")
+    use('Mofiqul/dracula.nvim')
     use("phelipetls/jsonpath.nvim")
     use("tpope/vim-surround")
     use("ggandor/leap.nvim")
@@ -77,23 +77,45 @@ return require('packer').startup(function(use)
 
     use {
         'nvim-lualine/lualine.nvim',
-       requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        requires = { 'kyazdani42/nvim-web-devicons' }
     }
 
     use {
         'KadoBOT/nvim-spotify',
         requires = 'nvim-telescope/telescope.nvim',
         config = function()
-            local spotify = require'nvim-spotify'
+            local spotify = require 'nvim-spotify'
 
             spotify.setup {
                 -- default opts
                 status = {
                     update_interval = 10000, -- the interval (ms) to check for what's currently playing
-                    format = '%s %t by %a' -- spotify-tui --format argument
+                    format = '%s %t by %a'   -- spotify-tui --format argument
                 }
             }
         end,
         run = 'make'
     }
+
+    use({
+        "folke/noice.nvim",
+        require("noice").setup({
+            routes = {
+                {
+                    filter = {
+                        event = "msg_show",
+                        kind = "",
+                        find = "written",
+                    },
+                    opts = { skip = true },
+                },
+            },
+            cmdline = {
+                view = "cmdline",
+            },
+        }),
+        requires = {
+            "MunifTanjim/nui.nvim",
+        }
+    })
 end)

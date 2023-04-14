@@ -3,10 +3,9 @@ require("tlegasse.remap")
 require("tlegasse.packer")
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local TlegasseGroup = augroup('tlegasse', {})
 
 local autocmd = vim.api.nvim_create_autocmd
-local yank_group = augroup('HighlightYank', {})
 
 function R(name)
     require("plenary.reload").reload_module(name)
@@ -24,7 +23,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({"BufWritePre"}, {
-    group = ThePrimeagenGroup,
+    group = TlegasseGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })

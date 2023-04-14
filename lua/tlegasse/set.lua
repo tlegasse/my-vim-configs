@@ -33,27 +33,26 @@ vim.opt.smartcase = true
 
 vim.g['sneak#label'] = 1
 
-vim.o.backupcopy="yes"
+vim.o.backupcopy = "yes"
 
 vim.g.diagnostics = "nvim_lsp"
 
 vim.cmd "set noshowmode"
 
 if vim.fn.has("wsl") == 1 then
-  vim.g.clipboard = {
-    name = "win32yank-wsl",
-    copy = {
-      ["+"] = "win32yank.exe -i --crlf",
-      ["*"] = "win32yank.exe -i --crlf",
-    },
-    paste = {
-      ["+"] = "win32yank.exe -o --lf",
-      ["*"] = "win32yank.exe -o --lf",
-    },
-    cache_enabled = 1,
-  }
+    vim.g.clipboard = {
+        name = "win32yank-wsl",
+        copy = {
+            ["+"] = "win32yank.exe -i --crlf",
+            ["*"] = "win32yank.exe -i --crlf",
+        },
+        paste = {
+            ["+"] = "win32yank.exe -o --lf",
+            ["*"] = "win32yank.exe -o --lf",
+        },
+        cache_enabled = 1,
+    }
 end
 
 vim.opt.listchars = { space = '.', tab = '>~' }
-
 vim.opt.clipboard = "unnamedplus"
