@@ -1,6 +1,7 @@
 require("tlegasse.set")
 require("tlegasse.remap")
 require("tlegasse.packer")
+require("tlegasse.netrw")
 
 local augroup = vim.api.nvim_create_augroup
 local TlegasseGroup = augroup('tlegasse', {})
@@ -28,10 +29,9 @@ autocmd({"BufWritePre"}, {
     command = [[%s/\s\+$//e]],
 })
 
-vim.g.netrw_browse_split = 0
-vim.g.netrw_banner = 0
-vim.g.netrw_winsize = 25
 
+
+-- Setting vimwiki files to autowrap on word break --
 vim.cmd [[
 augroup WikiFileSettings
   autocmd!
@@ -47,3 +47,6 @@ augroup END
 ]]
 
 require('leap').add_default_mappings()
+
+
+
