@@ -69,8 +69,6 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
-    use("vimwiki/vimwiki")
-
     use("tpope/vim-repeat")
     use("ggandor/flit.nvim")
     use("christoomey/vim-tmux-navigator")
