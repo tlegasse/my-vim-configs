@@ -23,7 +23,7 @@ autocmd('TextYankPost', {
     end,
 })
 
-autocmd({"BufWritePre"}, {
+autocmd({ "BufWritePre" }, {
     group = TlegasseGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
@@ -48,5 +48,10 @@ augroup END
 
 require('leap').add_default_mappings()
 
-
-
+vim.g.vimwiki_list = {
+    {
+        path = '~/vimwiki/',
+        syntax = 'markdown',
+        ext = '.md'
+    }
+}
