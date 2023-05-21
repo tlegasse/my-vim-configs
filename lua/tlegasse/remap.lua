@@ -29,10 +29,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<leader>v", "<cmd>e ~/.config/nvim/lua/tlegasse/packer.lua<CR>");
 
-vim.keymap.set("n", "<leader><leader>", function()
-    vim.cmd("so")
-end)
-
 vim.keymap.set("n", "<leader>e", "<cmd>Exp<CR>")
 
 vim.keymap.set("i", "kj", "<Esc>")
@@ -54,3 +50,5 @@ vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
 
 vim.keymap.set("n", "<leader>wv", "<cmd>wincmd s<CR>")
 vim.keymap.set("n", "<leader>wh", "<cmd>wincmd v<CR>")
+
+vim.keymap.set("n", "<leader><leader>", ":")

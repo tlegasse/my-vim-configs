@@ -62,14 +62,11 @@ return require('packer').startup(function(use)
     use("phelipetls/jsonpath.nvim")
     use("tpope/vim-surround")
     use("ggandor/leap.nvim")
-    use("preservim/nerdcommenter")
 
     use {
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-
-    use("vimwiki/vimwiki")
 
     use("tpope/vim-repeat")
     use("ggandor/flit.nvim")
@@ -97,25 +94,27 @@ return require('packer').startup(function(use)
         run = 'make'
     }
 
-    use({
-        "folke/noice.nvim",
-        require("noice").setup({
-            routes = {
-                {
-                    filter = {
-                        event = "msg_show",
-                        kind = "",
-                        find = "written",
+    use('tpope/vim-unimpaired')
+    use('andymass/vim-matchup')
+
+    use {
+        "nvim-neorg/neorg",
+        config = function()
+            require('neorg').setup {
+                load = {
+                    ["core.defaults"] = {}, -- Loads default behaviour
+                    ["core.concealer"] = {}, -- Adds pretty icons to your documents
+                    ["core.dirman"] = { -- Manages Neorg workspaces
+                        config = {
+                            workspaces = {
+                                notes = "~/notes",
+                            },
+                        },
                     },
-                    opts = { skip = true },
                 },
-            },
-            cmdline = {
-                view = "cmdline",
-            },
-        }),
-        requires = {
-            "MunifTanjim/nui.nvim",
-        }
-    })
+            }
+        end,
+        run = ":Neorg sync-parsers",
+        requires = "nvim-lua/plenary.nvim",
+    }
 end)
