@@ -1,12 +1,14 @@
 require('lualine').setup {
     options = {
         theme = 'dracula-nvim',
-        icons_enabled = true,
+        icons_enabled = false,
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },
     },
     sections = {
         lualine_a = {
+        },
+        lualine_b = {
             {
                 'buffers',
                 filetype_names = {
@@ -23,12 +25,16 @@ require('lualine').setup {
                 },
             }
         },
-        lualine_b = {
-        },
         lualine_c = {
         },
+        lualine_x = {
+        },
+        lualine_y = {
+            "progress",
+            "location",
+        },
         lualine_z = {
-            'branch'
+            'mode'
         }
     },
 }

@@ -26,3 +26,4 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+vim.treesitter.language.register('htmljango', 'html')

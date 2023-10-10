@@ -71,32 +71,24 @@ return require('packer').startup(function(use)
 
     use("tpope/vim-repeat")
     use("ggandor/flit.nvim")
-    use("christoomey/vim-tmux-navigator")
 
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons' }
-    }
-
-    use {
-        'KadoBOT/nvim-spotify',
-        requires = 'nvim-telescope/telescope.nvim',
-        config = function()
-            local spotify = require 'nvim-spotify'
-
-            spotify.setup {
-                -- default opts
-                status = {
-                    update_interval = 10000, -- the interval (ms) to check for what's currently playing
-                    format = '%s %t by %a'   -- spotify-tui --format argument
-                }
-            }
-        end,
-        run = 'make'
-    }
+    use('nvim-lualine/lualine.nvim')
 
     use('tpope/vim-unimpaired')
     use('andymass/vim-matchup')
 
     use('vimwiki/vimwiki')
+
+    use('RRethy/vim-illuminate')
+    use('christoomey/vim-tmux-navigator')
+
+    use 'ray-x/go.nvim'
+    use 'ray-x/guihua.lua'
+
+    use({
+      "glacambre/firenvim",
+      run = function() vim.fn["firenvim#install"](0) end,
+      opt = true,
+      setup = [[vim.cmd('packadd firenvim')]],
+    })
 end)

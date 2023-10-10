@@ -34,6 +34,7 @@ vim.opt.smartcase = true
 vim.g['sneak#label'] = 1
 
 vim.o.backupcopy = "yes"
+vim.o.shell = "/bin/bash -i"
 
 vim.g.diagnostics = "nvim_lsp"
 
