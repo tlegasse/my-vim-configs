@@ -91,4 +91,19 @@ return require('packer').startup(function(use)
       opt = true,
       setup = [[vim.cmd('packadd firenvim')]],
     })
+    use('lewis6991/gitsigns.nvim')
+
+
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
+    use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"}}
+    use {
+      "microsoft/vscode-js-debug",
+      opt = true,
+      run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+    }
+    use 'theHamsta/nvim-dap-virtual-text'
+    use 'leoluz/nvim-dap-go'
+    require('dapui').setup()
+    require('dap-go').setup()
+
 end)

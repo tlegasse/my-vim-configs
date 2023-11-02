@@ -51,3 +51,11 @@ vim.keymap.set("n", "<leader>wv", "<cmd>wincmd s<CR>")
 vim.keymap.set("n", "<leader>wh", "<cmd>wincmd v<CR>")
 
 vim.keymap.set("n", "<leader><leader>", ":")
+
+
+-- Debugger
+vim.api.nvim_set_keymap("n", "<leader>dt", ":DapUiToggle<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>db", ":DapToggleBreakpoint<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>dn", ":DapContinue<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>do", ":lua require('dapui').open({reset = true})<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>dd", ":lua require('dapui').close()<CR>", {noremap=true})
