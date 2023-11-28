@@ -37,21 +37,18 @@ vim.keymap.set("v", "<", "<gv")
 
 vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
 
-vim.keymap.set("n", "<Tab>", "<cmd>bn<cr>")
-vim.keymap.set("n", "<S-Tab>", "<cmd>bp<cr>")
 vim.keymap.set("n", "<leader>bb", "<cmd>Telescope buffers<cr>")
 vim.keymap.set("n", "<leader>gg", "<cmd>Telescope git_files<cr>")
-
-vim.keymap.set("n", "<C-h>", "<cmd>wincmd h<CR>")
-vim.keymap.set("n", "<C-l>", "<cmd>wincmd l<CR>")
-vim.keymap.set("n", "<C-j>", "<cmd>wincmd j<CR>")
-vim.keymap.set("n", "<C-k>", "<cmd>wincmd k<CR>")
 
 vim.keymap.set("n", "<leader>wv", "<cmd>wincmd s<CR>")
 vim.keymap.set("n", "<leader>wh", "<cmd>wincmd v<CR>")
 
 vim.keymap.set("n", "<leader><leader>", ":")
+vim.keymap.set("n", "<leader>f", ":LspZeroFormat<CR>")
 
+vim.keymap.set("n", "<leader>bn", ":bn<CR>")
+vim.keymap.set("n", "<leader>bp", ":bp<CR>")
+vim.keymap.set("n", "<leader>z", "ZZ")
 
 -- Debugger
 vim.api.nvim_set_keymap("n", "<leader>dt", ":DapUiToggle<CR>", {noremap=true})
@@ -59,3 +56,8 @@ vim.api.nvim_set_keymap("n", "<leader>db", ":DapToggleBreakpoint<CR>", {noremap=
 vim.api.nvim_set_keymap("n", "<leader>dn", ":DapContinue<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>do", ":lua require('dapui').open({reset = true})<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>dd", ":lua require('dapui').close()<CR>", {noremap=true})
+
+
+vim.api.nvim_set_keymap('i', '<C-c>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
+vim.api.nvim_set_keymap('i', '<C-c>n', 'copilot#Next()', {expr=true, silent=true})
+vim.api.nvim_set_keymap('i', '<C-c>p', 'copilot#Next()', {expr=true, silent=true})

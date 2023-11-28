@@ -74,13 +74,11 @@ return require('packer').startup(function(use)
 
     use('nvim-lualine/lualine.nvim')
 
-    use('tpope/vim-unimpaired')
     use('andymass/vim-matchup')
 
     use('vimwiki/vimwiki')
 
     use('RRethy/vim-illuminate')
-    use('christoomey/vim-tmux-navigator')
 
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua'
@@ -102,7 +100,9 @@ return require('packer').startup(function(use)
       run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
     }
     use 'theHamsta/nvim-dap-virtual-text'
+
     use 'leoluz/nvim-dap-go'
+
     require('dapui').setup()
     require('dap-go').setup()
 
