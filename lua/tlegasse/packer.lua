@@ -91,7 +91,6 @@ return require('packer').startup(function(use)
     })
     use('lewis6991/gitsigns.nvim')
 
-
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
     use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"}}
     use {
@@ -102,6 +101,7 @@ return require('packer').startup(function(use)
     use 'theHamsta/nvim-dap-virtual-text'
 
     use 'leoluz/nvim-dap-go'
+    use 'nvim-tree/nvim-tree.lua'
 
     require('dapui').setup()
     require('dap-go').setup()

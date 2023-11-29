@@ -56,6 +56,13 @@ vim.g.vimwiki_list = {
     }
 }
 
-if vim.g.started_by_firenvim == true then
-    vim.g.firenvim_config.localSettings['.*'] = { takeover = 'never' }
-end
+-- An augroup that runs last when vim is loaded that sets vim.opt.laststatus to 0
+-- This is to prevent the statusline from showing up on startup
+
+vim.cmd [[
+augroup LastStatus
+  autocmd!
+  autocmd VimEnter * set laststatus=0
+augroup END
+]]
+

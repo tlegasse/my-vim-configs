@@ -28,12 +28,14 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<leader>v", "<cmd>e ~/.config/nvim/lua/tlegasse/packer.lua<CR>");
 
-vim.keymap.set("n", "<leader>e", "<cmd>Exp<CR>")
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 
 vim.keymap.set("i", "kj", "<Esc>")
 
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
+vim.keymap.set("n", ">", ">>")
+vim.keymap.set("n", "<", "<<")
 
 vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
 
