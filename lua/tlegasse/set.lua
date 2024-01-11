@@ -57,3 +57,6 @@ end
 
 vim.opt.listchars = { space = '.', tab = '>~' }
 vim.opt.clipboard = "unnamedplus"
+
+vim.g.leetcode_browser = "chrome"
+vim.g.leetcode_solution_filetype = "golang"

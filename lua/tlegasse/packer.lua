@@ -99,22 +99,5 @@ return require('packer').startup(function(use)
     require('dapui').setup()
     require('dap-go').setup()
 
-
-    use({
-        "kawre/leetcode.nvim",
-        build = ":TSUpdate html",
-        requires = {
-            "nvim-telescope/telescope.nvim",
-            "nvim-lua/plenary.nvim",
-            "MunifTanjim/nui.nvim",
-
-            "rcarriga/nvim-notify",
-            "nvim-tree/nvim-web-devicons",
-        },
-        opts = {
-            lang = "go",
-            directory = vim.fn.stdpath("data") .. "/leetcode/",
-        },
-    })
-
+    use 'ianding1/leetcode.vim'
 end)
