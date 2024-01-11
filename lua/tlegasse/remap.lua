@@ -53,7 +53,7 @@ vim.keymap.set("n", "<leader>bp", ":bp<CR>")
 vim.keymap.set("n", "<leader>z", "ZZ")
 
 -- Debugger
-vim.api.nvim_set_keymap("n", "<leader>dt", ":DapUiToggle<CR>", {noremap=true})
+vim.api.nvim_set_keymap("n", "<leader>dt", ":DapTerminate<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>db", ":DapToggleBreakpoint<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>dn", ":DapContinue<CR>", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>do", ":lua require('dapui').open({reset = true})<CR>", {noremap=true})
