@@ -57,7 +57,8 @@ return require('packer').startup(function(use)
     }
 
     use("mattn/emmet-vim")
-    use('Mofiqul/dracula.nvim')
+    -- use('Mofiqul/dracula.nvim')
+    use('NLKNguyen/papercolor-theme')
     use("phelipetls/jsonpath.nvim")
     use("tpope/vim-surround")
     use("ggandor/leap.nvim")
@@ -90,14 +91,12 @@ return require('packer').startup(function(use)
     })
     use('lewis6991/gitsigns.nvim')
 
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}}
+    use "rcarriga/nvim-dap-ui"
+    use "mfussenegger/nvim-dap"
     use 'theHamsta/nvim-dap-virtual-text'
 
     use 'leoluz/nvim-dap-go'
     use 'nvim-tree/nvim-tree.lua'
-
-    require('dapui').setup()
-    require('dap-go').setup()
 
     use 'ianding1/leetcode.vim'
 end)

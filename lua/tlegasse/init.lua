@@ -65,4 +65,3 @@ augroup LastStatus
   autocmd VimEnter * set laststatus=0
 augroup END
 ]]
-
