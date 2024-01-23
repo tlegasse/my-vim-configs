@@ -76,7 +76,10 @@ return require('packer').startup(function(use)
 
     use('andymass/vim-matchup')
 
-    use('vimwiki/vimwiki')
+    use{
+        'vimwiki/vimwiki',
+        branch = 'dev'
+    }
 
     use('RRethy/vim-illuminate')
 
@@ -97,6 +100,8 @@ return require('packer').startup(function(use)
 
     use 'leoluz/nvim-dap-go'
     use 'nvim-tree/nvim-tree.lua'
-
-    use 'ianding1/leetcode.vim'
+    use 'tools-life/taskwiki'
+    use 'blindFS/vim-taskwarrior'
+    use 'powerman/vim-plugin-AnsiEsc'
+    use 'preservim/tagbar'
 end)
