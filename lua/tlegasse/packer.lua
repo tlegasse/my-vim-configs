@@ -1,38 +1,12 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 return require('packer').startup(function(use)
-    -- Packer can manage itself
+    -- Packer
     use 'wbthomason/packer.nvim'
 
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        -- or                            , branch = '0.1.x',
-        requires = { { 'nvim-lua/plenary.nvim' } }
-    }
-
-    use({
-        "folke/trouble.nvim",
-        config = function()
-            require("trouble").setup {
-                icons = false,
-                use_diagnostic_signs = true,
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
-    })
-
-
-    use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-    use("theprimeagen/refactoring.nvim")
-    use("mbbill/undotree")
-    use("tpope/vim-fugitive")
-    use("nvim-treesitter/nvim-treesitter-context");
-
-    use("jose-elias-alvarez/null-ls.nvim");
-    use("jay-babu/mason-null-ls.nvim");
-
+    -- LSP
+    use'jose-elias-alvarez/null-ls.nvim';
+    use'jay-babu/mason-null-ls.nvim';
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -56,52 +30,64 @@ return require('packer').startup(function(use)
         }
     }
 
-    use("mattn/emmet-vim")
+    --- Debugging
+    use 'rcarriga/nvim-dap-ui'
+    use 'mfussenegger/nvim-dap'
+    use 'theHamsta/nvim-dap-virtual-text'
+    use 'leoluz/nvim-dap-go'
+
+    -- Appearance / Visibility
     -- use('Mofiqul/dracula.nvim')
-    use('NLKNguyen/papercolor-theme')
-    use("phelipetls/jsonpath.nvim")
-    use("tpope/vim-surround")
-    use("ggandor/leap.nvim")
-    --use("preservim/nerdcommenter")
-
+    use 'RRethy/vim-illuminate'
+    use 'NLKNguyen/papercolor-theme'
+    use 'nvim-lualine/lualine.nvim'
     use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {} end
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { { 'nvim-lua/plenary.nvim' } }
     }
+    use({
+        'folke/trouble.nvim',
+        config = function()
+            require('trouble').setup {
+                icons = false,
+                use_diagnostic_signs = true,
+            }
+        end
+    })
+    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+    use 'nvim-treesitter/nvim-treesitter-context';
 
-    use("tpope/vim-repeat")
-    use("ggandor/flit.nvim")
+    -- Code interaction
+    use 'phelipetls/jsonpath.nvim'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-repeat'
+    use 'theprimeagen/refactoring.nvim'
 
-    use('nvim-lualine/lualine.nvim')
+    -- Code navigation
+    use 'ggandor/leap.nvim'
+    use 'andymass/vim-matchup'
+    use 'ggandor/flit.nvim'
 
-    use('andymass/vim-matchup')
+    -- Load speed
+    use 'ray-x/go.nvim'
+    use 'ray-x/guihua.lua'
 
+    -- Git
+    use 'tpope/vim-fugitive'
+    use 'lewis6991/gitsigns.nvim'
+
+    -- Undo Tree / File Tree
+    use 'nvim-tree/nvim-tree.lua'
+    use 'mbbill/undotree'
+
+    -- Task Warrior / Wiki
+    use 'tools-life/taskwiki'
+    use 'blindFS/vim-taskwarrior'
+    use 'powerman/vim-plugin-AnsiEsc'
+    use 'preservim/tagbar'
     use{
         'vimwiki/vimwiki',
         branch = 'dev'
     }
 
-    use('RRethy/vim-illuminate')
-
-    use 'ray-x/go.nvim'
-    use 'ray-x/guihua.lua'
-
-    use({
-      "glacambre/firenvim",
-      run = function() vim.fn["firenvim#install"](0) end,
-      opt = true,
-      setup = [[vim.cmd('packadd firenvim')]],
-    })
-    use('lewis6991/gitsigns.nvim')
-
-    use "rcarriga/nvim-dap-ui"
-    use "mfussenegger/nvim-dap"
-    use 'theHamsta/nvim-dap-virtual-text'
-
-    use 'leoluz/nvim-dap-go'
-    use 'nvim-tree/nvim-tree.lua'
-    use 'tools-life/taskwiki'
-    use 'blindFS/vim-taskwarrior'
-    use 'powerman/vim-plugin-AnsiEsc'
-    use 'preservim/tagbar'
 end)
