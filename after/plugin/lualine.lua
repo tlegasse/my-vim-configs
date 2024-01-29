@@ -1,6 +1,6 @@
 require('lualine').setup {
     options = {
-        theme = 'papercolor_light',
+        theme = 'catppuccin',
         icons_enabled = false,
         component_separators = { left = '', right = '' },
         section_separators = { left = '', right = '' },

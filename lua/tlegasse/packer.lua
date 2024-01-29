@@ -37,7 +37,7 @@ return require('packer').startup(function(use)
     -- Appearance / Visibility
     -- use('Mofiqul/dracula.nvim')
     use 'RRethy/vim-illuminate'
-    use 'NLKNguyen/papercolor-theme'
+    use { "catppuccin/nvim", as = "catppuccin" }
     use 'nvim-lualine/lualine.nvim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
     use 'nvim-treesitter/nvim-treesitter-context';
 
     -- Code interaction
+    use 'mattn/emmet-vim'
     use 'phelipetls/jsonpath.nvim'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
@@ -88,4 +89,5 @@ return require('packer').startup(function(use)
         branch = 'dev'
     }
 
+    use 'chrisbra/Colorizer'
 end)
