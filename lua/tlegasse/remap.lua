@@ -19,18 +19,12 @@ vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
-vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
-vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n", "<leader>v", "<cmd>e ~/.config/nvim/lua/tlegasse/packer.lua<CR>");
 
 vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
-
-vim.keymap.set("i", "kj", "<Esc>")
 
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "<", "<gv")
@@ -46,22 +40,9 @@ vim.keymap.set("n", "<leader>wv", "<cmd>wincmd s<CR>")
 vim.keymap.set("n", "<leader>wh", "<cmd>wincmd v<CR>")
 
 vim.keymap.set("n", "<leader><leader>", ":")
-vim.keymap.set("n", "<leader>f", ":LspZeroFormat<CR>")
 
 vim.keymap.set("n", "<leader>z", "ZZ")
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<tab>", ":bn<CR>")
 vim.keymap.set("n", "<S-tab>", ":bp<CR>")
-
--- Debugger
-vim.api.nvim_set_keymap("n", "<leader>dt", ":DapTerminate<CR>", {noremap=true})
-vim.api.nvim_set_keymap("n", "<leader>db", ":DapToggleBreakpoint<CR>", {noremap=true})
-vim.api.nvim_set_keymap("n", "<leader>dn", ":DapContinue<CR>", {noremap=true})
-vim.api.nvim_set_keymap("n", "<leader>do", ":lua require('dapui').open({reset = true})<CR>", {noremap=true})
-vim.api.nvim_set_keymap("n", "<leader>dd", ":lua require('dapui').close()<CR>", {noremap=true})
-
-
-vim.api.nvim_set_keymap('i', '<C-c>', 'copilot#Accept("<CR>")', {expr=true, silent=true})
-vim.api.nvim_set_keymap('i', '<C-c>n', 'copilot#Next()', {expr=true, silent=true})
-vim.api.nvim_set_keymap('i', '<C-c>p', 'copilot#Next()', {expr=true, silent=true})

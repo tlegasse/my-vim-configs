@@ -1,5 +1,3 @@
-vim.opt.guicursor = ""
-
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
@@ -17,16 +15,15 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
-vim.opt.updatetime = 50
+vim.opt.updatetime = 750
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -39,7 +36,14 @@ vim.o.shell = "/bin/bash -i"
 vim.g.diagnostics = "nvim_lsp"
 vim.g.python3_host_prog = "/usr/local/bin/python3"
 
-vim.cmd "set noshowmode"
+
+vim.g.vimwiki_list = {
+    {
+        path = '~/vimwiki/',
+        syntax = 'markdown',
+        ext = '.md'
+    }
+}
 
 if vim.fn.has("wsl") == 1 then
     vim.g.clipboard = {
@@ -56,8 +60,4 @@ if vim.fn.has("wsl") == 1 then
     }
 end
 
-vim.opt.listchars = { space = '.', tab = '>~' }
 vim.opt.clipboard = "unnamedplus"
-
-vim.g.leetcode_browser = "chrome"
-vim.g.leetcode_solution_filetype = "golang"

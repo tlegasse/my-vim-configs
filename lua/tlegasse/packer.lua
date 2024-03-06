@@ -2,33 +2,23 @@ return require('packer').startup(function(use)
     -- Packer
     use 'wbthomason/packer.nvim'
 
-    -- LSP
-    use'jose-elias-alvarez/null-ls.nvim';
-    use'jay-babu/mason-null-ls.nvim';
-
-
     use 'neovim/nvim-lspconfig'
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
 
-    -- Autocompletio
-    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-nvim-lua'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
 
-    -- Snippet
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
     use 'L3MON4D3/LuaSnip'
     use 'rafamadriz/friendly-snippets'
+    use 'saadparwaiz1/cmp_luasnip'
+    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
 
-
-    --- Debugging
-    use 'rcarriga/nvim-dap-ui'
-    use 'mfussenegger/nvim-dap'
-    use 'theHamsta/nvim-dap-virtual-text'
-    use 'leoluz/nvim-dap-go'
+    -- Completion / Writing
+    use 'mattn/emmet-vim'
 
     -- Appearance / Visibility
     use { "catppuccin/nvim", as = "catppuccin" }
@@ -38,7 +28,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use({
+    use ({
         'folke/trouble.nvim',
         config = function()
             require('trouble').setup {
@@ -48,19 +38,23 @@ return require('packer').startup(function(use)
         end
     })
 
-    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use 'norcalli/nvim-colorizer.lua'
 
     -- Code interaction
-    use 'mattn/emmet-vim'
+
     use 'phelipetls/jsonpath.nvim'
     use 'tpope/vim-surround'
     use 'tpope/vim-repeat'
-    use 'theprimeagen/refactoring.nvim'
 
     -- Code navigation
-    use 'ggandor/leap.nvim'
-    use 'ggandor/flit.nvim'
+    use {
+      'phaazon/hop.nvim',
+      branch = 'v2', -- optional but strongly recommended
+      config = function()
+        -- you can configure Hop the way you like here; see :h hop-config
+        require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
+      end
+    }
 
     -- Git
     use 'tpope/vim-fugitive'
@@ -70,8 +64,20 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
     use 'mbbill/undotree'
 
-    use{
+    use {
       'vimwiki/vimwiki',
         branch = 'dev'
     }
+
+    use 'nvim-tree/nvim-web-devicons'
+
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
+
+    use 'akinsho/bufferline.nvim'
+    use 'lukas-reineke/cmp-under-comparator'
 end)
