@@ -5,28 +5,24 @@ return require('packer').startup(function(use)
     -- LSP
     use'jose-elias-alvarez/null-ls.nvim';
     use'jay-babu/mason-null-ls.nvim';
-    use {
-        'VonHeikemen/lsp-zero.nvim',
-        branch = 'v1.x',
-        requires = {
-            -- LSP Support
-            { 'neovim/nvim-lspconfig' },
-            { 'williamboman/mason.nvim' },
-            { 'williamboman/mason-lspconfig.nvim' },
 
-            -- Autocompletion
-            { 'hrsh7th/nvim-cmp' },
-            { 'hrsh7th/cmp-buffer' },
-            { 'hrsh7th/cmp-path' },
-            { 'saadparwaiz1/cmp_luasnip' },
-            { 'hrsh7th/cmp-nvim-lsp' },
-            { 'hrsh7th/cmp-nvim-lua' },
 
-            -- Snippets
-            { 'L3MON4D3/LuaSnip' },
-            { 'rafamadriz/friendly-snippets' },
-        }
-    }
+    use 'neovim/nvim-lspconfig'
+    use 'williamboman/mason.nvim'
+    use 'williamboman/mason-lspconfig.nvim'
+
+    -- Autocompletio
+    use 'hrsh7th/nvim-cmp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'saadparwaiz1/cmp_luasnip'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-nvim-lua'
+
+    -- Snippet
+    use 'L3MON4D3/LuaSnip'
+    use 'rafamadriz/friendly-snippets'
+
 
     --- Debugging
     use 'rcarriga/nvim-dap-ui'
@@ -35,14 +31,13 @@ return require('packer').startup(function(use)
     use 'leoluz/nvim-dap-go'
 
     -- Appearance / Visibility
-    -- use('Mofiqul/dracula.nvim')
-    use 'RRethy/vim-illuminate'
     use { "catppuccin/nvim", as = "catppuccin" }
-    use 'nvim-lualine/lualine.nvim'
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
+
     use({
         'folke/trouble.nvim',
         config = function()
@@ -52,8 +47,9 @@ return require('packer').startup(function(use)
             }
         end
     })
+
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
-    use 'nvim-treesitter/nvim-treesitter-context';
+    use 'norcalli/nvim-colorizer.lua'
 
     -- Code interaction
     use 'mattn/emmet-vim'
@@ -64,12 +60,7 @@ return require('packer').startup(function(use)
 
     -- Code navigation
     use 'ggandor/leap.nvim'
-    use 'andymass/vim-matchup'
     use 'ggandor/flit.nvim'
-
-    -- Load speed
-    use 'ray-x/go.nvim'
-    use 'ray-x/guihua.lua'
 
     -- Git
     use 'tpope/vim-fugitive'
@@ -79,15 +70,8 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
     use 'mbbill/undotree'
 
-    -- Task Warrior / Wiki
-    use 'tools-life/taskwiki'
-    use 'blindFS/vim-taskwarrior'
-    use 'powerman/vim-plugin-AnsiEsc'
-    use 'preservim/tagbar'
     use{
-        'vimwiki/vimwiki',
+      'vimwiki/vimwiki',
         branch = 'dev'
     }
-
-    use 'chrisbra/Colorizer'
 end)

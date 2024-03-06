@@ -48,9 +48,11 @@ vim.keymap.set("n", "<leader>wh", "<cmd>wincmd v<CR>")
 vim.keymap.set("n", "<leader><leader>", ":")
 vim.keymap.set("n", "<leader>f", ":LspZeroFormat<CR>")
 
-vim.keymap.set("n", "<leader>bn", ":bn<CR>")
-vim.keymap.set("n", "<leader>bp", ":bp<CR>")
 vim.keymap.set("n", "<leader>z", "ZZ")
+vim.keymap.set("n", "<C-h>", "<C-w>h")
+vim.keymap.set("n", "<C-l>", "<C-w>l")
+vim.keymap.set("n", "<tab>", ":bn<CR>")
+vim.keymap.set("n", "<S-tab>", ":bp<CR>")
 
 -- Debugger
 vim.api.nvim_set_keymap("n", "<leader>dt", ":DapTerminate<CR>", {noremap=true})

@@ -37,6 +37,7 @@ vim.o.backupcopy = "yes"
 vim.o.shell = "/bin/bash -i"
 
 vim.g.diagnostics = "nvim_lsp"
+vim.g.python3_host_prog = "/usr/local/bin/python3"
 
 vim.cmd "set noshowmode"
 
