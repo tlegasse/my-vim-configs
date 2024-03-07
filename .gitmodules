@@ -1,3 +1,6 @@
 [submodule "pack/github/start/copilot.vim"]
 	path = pack/github/start/copilot.vim
 	url = https://github.com/github/copilot.vim
+[submodule "ts-grammar"]
+	path = ts-grammar
+	url = https://github.com/Shopify/tree-sitter-liquid
