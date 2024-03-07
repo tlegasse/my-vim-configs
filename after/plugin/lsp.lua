@@ -48,13 +48,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
   end,
 })
 
-
-
-local servers = { 'pyright', 'tsserver', 'rust_analyzer' } -- Add more servers as needed
-for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
-  }
-end
-
-

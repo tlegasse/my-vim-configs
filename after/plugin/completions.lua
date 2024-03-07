@@ -43,10 +43,10 @@ cmp.setup({
     end, { 'i', 's' }),
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp', priority = 10 },
-    { name = 'luasnip', priority = 9 },
-    { name = 'buffer', priority = 8 },
-    { name = 'path', priority = 7 },
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+    { name = 'buffer' },
+    { name = 'path' },
   }),
   sorting = {
     comparators = {
@@ -80,7 +80,6 @@ cmp.setup.cmdline({ '/', '?' }, {
     }
 })
 
-
 -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
 cmp.setup.cmdline(':', {
     mapping = cmp.mapping.preset.cmdline(),
@@ -91,3 +90,15 @@ cmp.setup.cmdline(':', {
         { name = 'cmdline' }
     })
 })
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+-- Configure LSP servers
+local servers = { 'pyright', 'tsserver', 'rust_analyzer' }
+
+for _, lsp in ipairs(servers) do
+  require('lspconfig')[lsp].setup {
+    capabilities = capabilities,
+    -- Add any other server-specific configuration options here
+  }
+end

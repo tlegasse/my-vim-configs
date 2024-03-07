@@ -80,4 +80,6 @@ return require('packer').startup(function(use)
 
     use 'akinsho/bufferline.nvim'
     use 'lukas-reineke/cmp-under-comparator'
+
+    use 'jiangmiao/auto-pairs'
 end)
