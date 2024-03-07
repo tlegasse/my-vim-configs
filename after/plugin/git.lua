@@ -1,8 +1,8 @@
 vim.keymap.set("n", "<leader>gaa", ":G add .<CR>")
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<leader>gc", ":G commit -m '")
-vim.keymap.set("n", "<leader>gb", ":G checkout")
-vim.keymap.set("n", "<leader>gbn", ":G checkout -b ")
+vim.keymap.set("n", "<leader>go", ":GBrowse<CR>")
+vim.keymap.set("n", "<leader>gb", ":G checkout ")
 
 local Fugitive_Group = vim.api.nvim_create_augroup("Fugitive_Group", {})
 

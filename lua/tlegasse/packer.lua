@@ -53,6 +53,7 @@ return require('packer').startup(function(use)
 
     -- Git
     use 'tpope/vim-fugitive'
+    use 'tpope/vim-rhubarb'
     use 'lewis6991/gitsigns.nvim'
 
     -- Undo Tree / File Tree
