@@ -2,7 +2,6 @@ local mocha = require("catppuccin.palettes").get_palette "mocha"
 require("bufferline").setup{
     options = {
         show_buffer_close_icons = false,
-        color_icons = true,
         offsets = {
             {
                 filetype = "NvimTree",

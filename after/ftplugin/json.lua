@@ -1,10 +1,3 @@
--- in after/ftplugin/json.lua
-
--- show json path in the winbar
-if vim.fn.exists("+winbar") == 1 then
-  vim.opt_local.winbar = "%{%v:lua.require'jsonpath'.get()%}"
-end
-
 -- send json path to clipboard
 vim.keymap.set("n", "<leader>j", function()
   vim.fn.setreg("+", require("jsonpath").get())
