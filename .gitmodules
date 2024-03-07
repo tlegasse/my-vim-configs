@@ -1,0 +1,3 @@
+[submodule "ts-grammar/tree-sitter-liquid"]
+	path = ts-grammar/tree-sitter-liquid
+	url = https://github.com/Shopify/tree-sitter-liquid
