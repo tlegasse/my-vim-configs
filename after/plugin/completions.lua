@@ -19,7 +19,7 @@ cmp.setup({
     documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
-    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-x>'] = cmp.mapping.abort(),
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Confirm selection with Enter
     ['<Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
@@ -31,7 +31,7 @@ cmp.setup({
       else
         fallback()
       end
-    end, { 'i', 's' }),
+    end, { 'i' }),
     ['<S-Tab>'] = cmp.mapping(function(fallback)
       if cmp.visible() then
         cmp.select_prev_item()
@@ -40,13 +40,13 @@ cmp.setup({
       else
         fallback()
       end
-    end, { 'i', 's' }),
+    end, { 'i' }),
   }),
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'luasnip' },
-    { name = 'buffer' },
-    { name = 'path' },
+    { name = 'nvim_lsp', priority = 9},
+    { name = 'luasnip', priority = 8 },
+    { name = 'buffer', priority = 7 },
+    { name = 'path', priority = 6 },
   }),
   sorting = {
     comparators = {
