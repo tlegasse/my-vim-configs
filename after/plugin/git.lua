@@ -1,6 +1,8 @@
+vim.keymap.set("n", "<leader>gaa", ":G add .<CR>")
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 vim.keymap.set("n", "<leader>gc", ":G commit -m '")
-vim.keymap.set("n", "<leader>gb", ":G checkout -b ")
+vim.keymap.set("n", "<leader>gb", ":G checkout")
+vim.keymap.set("n", "<leader>gbn", ":G checkout -b ")
 
 local Fugitive_Group = vim.api.nvim_create_augroup("Fugitive_Group", {})
 
@@ -28,6 +30,6 @@ autocmd("BufWinEnter", {
 
         -- NOTE: It allows me to easily set the branch i am pushing and any tracking
         -- needed if i did not set the branch up correctly
-        vim.keymap.set("n", "<leader>gb", ":Git push -u origin ", opts);
+        vim.keymap.set("n", "<leader>gb", ":G push -u origin ", opts);
     end,
 })
