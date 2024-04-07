@@ -11,8 +11,10 @@ return require('packer').startup(function(use)
     use 'hrsh7th/nvim-cmp'
     use 'williamboman/mason.nvim'
     use 'williamboman/mason-lspconfig.nvim'
-    use 'L3MON4D3/LuaSnip'
-    use 'rafamadriz/friendly-snippets'
+    use {
+        'L3MON4D3/LuaSnip',
+        requires = 'rafamadriz/friendly-snippets'
+    }
     use 'saadparwaiz1/cmp_luasnip'
     use 'mattn/emmet-vim'
     use 'numToStr/Comment.nvim'
@@ -29,7 +31,7 @@ return require('packer').startup(function(use)
     use { "catppuccin/nvim", as = "catppuccin" }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { { 'nvim-lua/plenary.nvim' } }
+        requires = { 'nvim-lua/plenary.nvim' }
     }
     use ({
         'folke/trouble.nvim',
