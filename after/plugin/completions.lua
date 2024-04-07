@@ -6,6 +6,7 @@ end
 
 local luasnip = require("luasnip")
 require("luasnip.loaders.from_vscode").lazy_load()
+luasnip.filetype_extend("vimwiki", {"markdown"})
 local cmp = require('cmp')
 local lspkind = require('lspkind')
 
