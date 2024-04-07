@@ -11,11 +11,10 @@ require('mason').setup({
   },
 })
 require('mason-lspconfig').setup({
-  ensure_installed = { 'pyright', 'tsserver', 'lua_ls'},
   automatic_installation = true,
 })
 
-local servers = { 'pyright', 'tsserver', 'lua_ls' }
+local servers = { 'tsserver', 'lua_ls' }
 
 for _, server in ipairs(servers) do
   local opts = {}

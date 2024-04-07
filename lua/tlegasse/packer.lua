@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
     use 'numToStr/Comment.nvim'
     use 'jiangmiao/auto-pairs'
     use 'lukas-reineke/cmp-under-comparator'
+    use 'onsails/lspkind.nvim'
 
     -- Syntax highlighting
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
@@ -65,4 +66,7 @@ return require('packer').startup(function(use)
       'vimwiki/vimwiki',
         branch = 'dev'
     }
+
+    use 'ray-x/go.nvim'
+    use 'ray-x/guihua.lua' -- recommended if need floating window support
 end)
