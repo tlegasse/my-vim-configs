@@ -1,14 +1,9 @@
--- Setting vimwiki files to autowrap on word break --
-vim.cmd [[
-augroup WikiFileSettings
-  autocmd!
-  autocmd FileType md setlocal wrap linebreak textwidth=0
-augroup END
-]]
+vim.api.nvim_create_autocmd({"BufEnter", "BufRead", "BufNewFile"}, {
+  pattern = "*.md",
+  command = "set filetype=markdown",
+})
 
-vim.cmd [[
-augroup WikiFiletype
-  autocmd!
-  autocmd BufNewFile,BufRead *.wiki setfiletype wiki
-augroup END
-]]
+vim.api.nvim_create_autocmd({"BufEnter", "BufRead", "BufNewFile"}, {
+  pattern = "~/vimwiki/*.md",
+  command = "set filetype=vimwiki",
+})
