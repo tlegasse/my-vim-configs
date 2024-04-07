@@ -9,6 +9,9 @@ require("luasnip.loaders.from_vscode").lazy_load()
 local cmp = require('cmp')
 
 cmp.setup({
+  experimental = {
+    ghost_text = true, -- This enables the inline completion ghost text feature
+  },
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body) -- For `luasnip` users.

@@ -11,11 +11,11 @@ require('mason').setup({
   },
 })
 require('mason-lspconfig').setup({
-  ensure_installed = { 'pyright', 'tsserver', 'rust_analyzer', 'lua_ls'},
+  ensure_installed = { 'pyright', 'tsserver', 'lua_ls'},
   automatic_installation = true,
 })
 
-local servers = { 'pyright', 'tsserver', 'rust_analyzer', 'lua_ls' }
+local servers = { 'pyright', 'tsserver', 'lua_ls' }
 
 for _, server in ipairs(servers) do
   local opts = {}
@@ -44,24 +44,10 @@ end
 
 lspconfig.pyright.setup {}
 lspconfig.tsserver.setup {}
-lspconfig.rust_analyzer.setup {
-  -- Server-specific settings. See `:help lspconfig-setup`
-  settings = {
-    ['rust-analyzer'] = {},
-  },
-}
-
-
-
-
-
-
-
-
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
-vim.keymap.set('n', '<leader>lep', vim.diagnostic.goto_prev)
+vim.keymap.set('n', '<leader>ldp', vim.diagnostic.goto_prev)
 vim.keymap.set('n', '<leader>ldn', vim.diagnostic.goto_next)
 
 -- Use LspAttach autocommand to only map the following keys
