@@ -4,7 +4,7 @@ require('Comment').setup {
     ignore = nil,
     toggler = {
         ---Line-comment toggle keymap
-        line = 'gcc',
+        line = '<leader>c',
         ---Block-comment toggle keymap
         block = 'gbc',
     },
