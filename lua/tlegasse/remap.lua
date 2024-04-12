@@ -22,3 +22,6 @@ vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>t", "<cmd>NvimTreeToggle<CR>")
 
 vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
+
+vim.keymap.set("n", "<leader>w", "<C-space>")
+

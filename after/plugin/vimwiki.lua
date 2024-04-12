@@ -1,9 +1,2 @@
-vim.api.nvim_create_autocmd({"BufEnter", "BufRead", "BufNewFile"}, {
-  pattern = "*.md",
-  command = "set filetype=markdown",
-})
+vim.keymap.set("n", "<leader>tn", "i* [ ] ")
 
-vim.api.nvim_create_autocmd({"BufEnter", "BufRead", "BufNewFile"}, {
-  pattern = "~/vimwiki/*.md",
-  command = "set filetype=vimwiki",
-})

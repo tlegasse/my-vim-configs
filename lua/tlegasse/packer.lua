@@ -68,6 +68,10 @@ return require('packer').startup(function(use)
       'vimwiki/vimwiki',
         branch = 'dev'
     }
+    use 'majutsushi/tagbar'
+    use 'powerman/vim-plugin-AnsiEsc'
+    use 'farseer90718/vim-taskwarrior'
+    use 'tools-life/taskwiki'
 
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua' -- recommended if need floating window support
