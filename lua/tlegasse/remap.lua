@@ -9,7 +9,7 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("n", ">", ">>")
 vim.keymap.set("n", "<", "<<")
 
-vim.keymap.set("n", "<C-v>", "<cmd>lua require'telescope.builtin'.git_files({cwd='~/.config/nvim/'})<CR>");
+vim.keymap.set("n", "<leader>v", "<cmd>lua require'telescope.builtin'.git_files({cwd='~/.config/nvim/'})<CR>");
 
 vim.keymap.set("n", "<Tab>", "<cmd>bn<cr>")
 vim.keymap.set("n", "<S-Tab>", "<cmd>bp<cr>")
