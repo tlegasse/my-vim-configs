@@ -40,3 +40,5 @@ end
 
 -- Map <leader>sw to the toggle_wrap function
 vim.api.nvim_set_keymap('n', '<leader>sw', '<cmd>lua toggle_wrap()<CR>', { noremap = true, silent = true })
+
+vim.api.nvim_del_keymap('n', '<leader>swp')
