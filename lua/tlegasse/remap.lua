@@ -25,3 +25,18 @@ vim.keymap.set("n", "<leader>q", "<cmd>bd<cr>")
 
 vim.keymap.set("n", "<leader>w", "<C-space>")
 
+
+
+vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>")
+
+
+-- Define a function to toggle line wrap with word break
+function toggle_wrap()
+    local wrap = vim.wo.wrap
+    local linebreak = vim.wo.linebreak
+    vim.wo.wrap = not wrap
+    vim.wo.linebreak = not linebreak
+end
+
+-- Map <leader>sw to the toggle_wrap function
+vim.api.nvim_set_keymap('n', '<leader>sw', '<cmd>lua toggle_wrap()<CR>', { noremap = true, silent = true })

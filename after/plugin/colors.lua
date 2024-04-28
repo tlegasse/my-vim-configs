@@ -30,7 +30,7 @@ require("catppuccin").setup({
         cmp = true,
         gitsigns = true,
         nvimtree = true,
-        treesitter = true,
+        treesitter = false,
         notify = false,
         mini = {
             enabled = true,

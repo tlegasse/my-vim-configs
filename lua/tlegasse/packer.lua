@@ -23,14 +23,14 @@ return require('packer').startup(function(use)
     use 'onsails/lspkind.nvim'
 
     -- Syntax highlighting
-    use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
-    use 'nvim-treesitter/nvim-treesitter-textobjects'
+    -- use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+    -- use 'nvim-treesitter/nvim-treesitter-textobjects'
 
     -- Appearance / Visibility
     use 'norcalli/nvim-colorizer.lua'
     use { "catppuccin/nvim", as = "catppuccin" }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim',
         requires = { 'nvim-lua/plenary.nvim' }
     }
     use ({
@@ -75,4 +75,7 @@ return require('packer').startup(function(use)
 
     use 'ray-x/go.nvim'
     use 'ray-x/guihua.lua' -- recommended if need floating window support
+
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+    use 'theHamsta/nvim-dap-virtual-text'
 end)

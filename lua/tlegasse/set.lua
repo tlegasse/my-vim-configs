@@ -31,7 +31,7 @@ vim.opt.smartcase = true
 vim.g['sneak#label'] = 1
 
 vim.o.backupcopy = "yes"
-vim.o.shell = "/bin/bash -i"
+vim.o.shell = os.getenv("SHELL")
 
 vim.g.diagnostics = "nvim_lsp"
 vim.g.python3_host_prog = "/usr/local/bin/python3"
@@ -61,3 +61,6 @@ if vim.fn.has("wsl") == 1 then
 end
 
 vim.opt.clipboard = "unnamedplus"
+vim.g.python3_host_prog = "python"
+vim.env.LUA_CPATH = "/data/data/com.termux/files/home/lua_modules/lib/?.so;;"
+vim.env.LUA_PATH = "/data/data/com.termux/files/home/lua_modules/share/lua/5.1/?.lua;;"
