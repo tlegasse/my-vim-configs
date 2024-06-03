@@ -74,5 +74,4 @@ return require('packer').startup(function(use)
     use 'ray-x/guihua.lua' -- recommended if need floating window support
 
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
-    use 'theHamsta/nvim-dap-virtual-text'
 end)
