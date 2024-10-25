@@ -110,7 +110,7 @@ cmp.setup.cmdline(':', {
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 -- Configure LSP servers
-local servers = { 'pyright', 'tsserver' }
+local servers = { 'pyright' }
 
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {

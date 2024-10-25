@@ -16,7 +16,7 @@ require('mason-lspconfig').setup({
   automatic_installation = false,
 })
 
-local servers = { 'tsserver', 'lua_ls' }
+local servers = { 'lua_ls' }
 
 for _, server in ipairs(servers) do
   local opts = {}
@@ -44,7 +44,6 @@ for _, server in ipairs(servers) do
 end
 
 lspconfig.pyright.setup {}
-lspconfig.tsserver.setup {}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
