@@ -35,6 +35,7 @@ return require('packer').startup(function(use)
     }
     use ({
         'folke/trouble.nvim',
+        requires = 'nvim-tree/nvim-web-devicons',
         config = function()
             require('trouble').setup {
                 icons = false,
@@ -51,7 +52,6 @@ return require('packer').startup(function(use)
 
     -- Code navigation
     use 'ggandor/leap.nvim'
-    use 'ggandor/flit.nvim'
 
     -- Git
     use 'tpope/vim-fugitive'
