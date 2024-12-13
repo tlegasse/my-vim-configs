@@ -6,7 +6,6 @@ vim.keymap.set("n", "<leader>gb", ":G checkout ")
 
 local Fugitive_Group = vim.api.nvim_create_augroup("Fugitive_Group", {})
 
-require('gitsigns').setup()
 
 local autocmd = vim.api.nvim_create_autocmd
 autocmd("BufWinEnter", {
