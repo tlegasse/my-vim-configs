@@ -71,7 +71,14 @@ return require('packer').startup(function(use)
     use 'powerman/vim-plugin-AnsiEsc'
 
     use 'ray-x/go.nvim'
-    use 'ray-x/guihua.lua' -- recommended if need floating window support
+    use 'ray-x/guihua.lua'
 
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
+    use {
+        "mfussenegger/nvim-dap",
+        "jay-babu/mason-nvim-dap.nvim",
+
+        "nvim-neotest/nvim-nio"
+    }
+
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 end)
