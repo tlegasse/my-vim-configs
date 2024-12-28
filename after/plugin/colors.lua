@@ -1,7 +1,7 @@
 require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { light = "latte", dark = "mocha" }, -- latte, frappe, macchiato, mocha
-    transparent_background = false, -- disables setting the background color.
+    transparent_background = true, -- disables setting the background color.
     show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
     term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
     dim_inactive = {
@@ -30,7 +30,7 @@ require("catppuccin").setup({
         cmp = true,
         gitsigns = true,
         nvimtree = true,
-        treesitter = false,
+        treesitter = true,
         notify = false,
         mini = {
             enabled = true,
@@ -46,4 +46,3 @@ vim.cmd.colorscheme "catppuccin"
 require'colorizer'.setup()
 
 vim.o.termguicolors = true
-vim.cmd('highlight Normal guibg=rgb(30,30,46)')
