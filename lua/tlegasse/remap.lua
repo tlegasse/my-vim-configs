@@ -25,6 +25,7 @@ vim.keymap.set("n", "<leader>v", "<cmd>lua require'telescope.builtin'.git_files(
 
 vim.keymap.set("n", "<C-PageUp>", "<cmd>bp<cr>")
 vim.keymap.set("n", "<C-PageDown>", "<cmd>bn<cr>")
+vim.keymap.set("n", "<leader>b", "<cmd>Telescope buffers<CR>")
 
 vim.keymap.set("n", "<leader>i", [["_diwP]])
 
